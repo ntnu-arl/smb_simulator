@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<launch>
+	<arg name="world_name" default="worlds/empty.world"/>
+	<arg name="robot_namespace" default="smb"/>
+	<arg name="x" default="0.0"/>
+	<arg name="y" default="0.0"/>
+	<arg name="z" default="0.5"/>
+	<arg name="yaw" default="0.0"/>
+	<arg name="joystick" default="false"/>
+	<arg name="rviz" default="false"/>
+	<arg name="gazebo_gui_en" default="true"/>
+
+	<!-- Gazebo -->
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+		<arg name="world_name" value="$(arg world_name)"/>
+		<arg name="paused" value="false"/>
+		<arg name="use_sim_time" value="true"/>
+		<arg name="gui" value="$(arg gazebo_gui_en)"/>
+		<arg name="headless" value="false"/>
+		<arg name="debug" value="false"/>
+		<arg name="verbose" value="false"/>
+	</include>
+
+	<!-- Spawn SMB -->
+	<include file="$(find smb_gazebo)/launch/spawn_smb.launch">
+		<arg name="robot_namespace" value="$(arg robot_namespace)"/>
+		<arg name="x" value="$(arg x)"/>
+		<arg name="y" value="$(arg y)"/>
+		<arg name="z" value="$(arg z)"/>
+		<arg name="yaw" value="$(arg yaw)"/>
+		<arg name="joystick" value="false"/>
+	</include>
+
+	<!-- Rviz -->
+	<node type="rviz" name="rviz" pkg="rviz" if="$(arg rviz)" args="-d $(find smb_gazebo)/rviz/smb_sim.rviz"/>
+
+</launch>

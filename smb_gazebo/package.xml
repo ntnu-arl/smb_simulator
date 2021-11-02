@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>smb_gazebo</name>
+  <version>0.0.0</version>
+  <description>The smb_gazebo package</description>
+  
+  <maintainer email="nkhedekar@nevada.unr.edu">Nikhil Khedekar</maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>controller_manager</build_depend>
+  <build_depend>gazebo_ros</build_depend>
+  <build_depend>smb_lowlevel_controller</build_depend>
+  <build_depend>xacro</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>topic_tools</build_depend>
+  <build_depend>twist_mux</build_depend>
+  <build_depend>interactive_marker_twist_server</build_depend>
+  <build_export_depend>controller_manager</build_export_depend>
+  <build_export_depend>gazebo_ros</build_export_depend>
+  <build_export_depend>smb_lowlevel_controller</build_export_depend>
+  <build_export_depend>xacro</build_export_depend>
+  <build_export_depend>nav_msgs</build_export_depend>
+  <build_export_depend>geometry_msgs</build_export_depend>
+  <build_export_depend>sensor_msgs</build_export_depend>
+  <build_export_depend>topic_tools</build_export_depend>
+  <build_export_depend>twist_mux</build_export_depend>
+  <build_export_depend>interactive_marker_twist_server</build_export_depend>
+  <exec_depend>controller_manager</exec_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>smb_lowlevel_controller</exec_depend>
+  <exec_depend>xacro</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>topic_tools</exec_depend>
+  <exec_depend>twist_mux</exec_depend>
+  <exec_depend>interactive_marker_twist_server</exec_depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>
