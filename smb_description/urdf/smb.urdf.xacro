@@ -42,7 +42,7 @@
 	</link>
 
 	<gazebo reference="base_link">
-		<material>Gazebo/Blue</material>
+		<material>Gazebo/Orange</material>
 	</gazebo>
 
 	<!-- Interial link stores the robot's inertial information -->
