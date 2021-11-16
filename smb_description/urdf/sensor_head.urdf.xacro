@@ -32,17 +32,17 @@
 		<xacro:include filename="$(find smb_description)/urdf/smb_rgb_camera.urdf.xacro"/>
 
 		<!-- Cameras: -->
-		<!-- <xacro:rgb_camera parent="velodyne_base_link" name="rgb_cam_front">
-			<origin xyz="0.040 -0.02 0.09" rpy="0 0 0" />
+		<xacro:rgb_camera parent="${name}_base_link" name="rgb_cam_front">
+			<origin xyz="0.10 -0.03 0.033" rpy="0 0 0" />
 		</xacro:rgb_camera>
 
-		<xacro:rgb_camera parent="velodyne_base_link" name="rgb_cam_left">
-			<origin xyz="0 0.040 0.09" rpy="0 0 1.570795" />
+		<xacro:rgb_camera parent="${name}_base_link" name="rgb_cam_left">
+			<origin xyz="0.01 0.10 0.033" rpy="0 0 1.570795" />
 		</xacro:rgb_camera>
 
-		<xacro:rgb_camera parent="velodyne_base_link" name="rgb_cam_right">
-			<origin xyz="0 -0.040 0.09" rpy="0 0 -1.570795" />
-		</xacro:rgb_camera> -->
+		<xacro:rgb_camera parent="${name}_base_link" name="rgb_cam_right">
+			<origin xyz="0.01 -0.10 0.033" rpy="0 0 -1.570795" />
+		</xacro:rgb_camera>
 		
 	</xacro:macro>
 </robot>
